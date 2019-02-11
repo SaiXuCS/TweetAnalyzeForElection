@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Slack history visualization	
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../channels.json"></script>
+	<script type="text/javascript" src="../users.json"></script>
+	<style>
+		.container{
+			width:100%;
+		}
+		.panel{
+			height:100%;
+		}
+		.panel-body{
+			height:100%;
+			padding:0px;
+		}
+		h3{
+			margin-top:5px;
+			margin-bottom: 5px;
+
+		}
+		svg{
+			margin-top:10px;
+			border:1px solid black;
+			height:500px;
+		}
+		.bar rect {
+		  shape-rendering: crispEdges;
+		}
+
+		.bar text {
+		  fill: #999999;
+		}
+
+		.axis path, .axis line {
+		  fill: none;
+		  stroke: #000;
+		  shape-rendering: crispEdges;
+		}
+		#panel{
+			display:none;
+		}
+		.btn-group{
+			width:100%;
+		}
+	</style>
+	<script>
+		var getChannelHistory;
+		var pushUser= new Object();
+		var userActivity;
+		function initialize(){
+			var channel_data= channels_data;
+			var navbar= document.getElementById("navbar_list");
+			for(var i= 0; i< channel_data.length; i++){
+				var channel= channel_data[i];
+				var channel_name= channel.name;
+				var list= document.createElement("li");
+				list.innerHTML="<a>"+channel_name+"</a>";
+				navbar.append(list);
+				list.addEventListener("click", function(event){
+					var lists= navbar.getElementsByTagName("li");
+					for(var i= 0; i< lists.length; i++){
+						lists[i].className="";
+					}
+					event.target.parentNode.className+=" active";
+					loadData(event.target.innerHTML);
+					loadUserMap(event.target.innerHTML);
+				});
+			}
+		}
+		function loadData(name){
+			var xhttp = new XMLHttpRequest();
+		  	xhttp.onreadystatechange=function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		      		getChannelHistory= JSON.parse(this.responseText);
+		      		var ele= document.getElementById("panel");
+		      		ele.style.display= "block";
+		    	}
+		  	};
+		  	xhttp.open("GET", "getChannelData.php?channel="+name, true);
+		  	xhttp.send();
+		}
+		function loadUserMap(name){
+			var users= users_data;
+			for(var i= 0; i< users.length; i++){
+				var user= users[i];
+				var userName= user.name;
+				var userID= user.id;
+				pushUser[userID]= userName;
+			}
+			loadUser(name);
+		}
+		function loadUser(chan_name){
+			var channel_data= channels_data;
+			var channel_name= chan_name;
+			for(var i= 0; i<channel_data.length; i++){
+				var objChannel= channel_data[i];
+				if(objChannel.name== chan_name){
+					var members= objChannel.members;
+					for(var j= 0; j< members.length; j++){
+						var memberID= members[j];				
+						var memberName= pushUser[memberID];
+						var list= document.getElementById("memberChoose");
+						var li= document.createElement("li");
+						li.innerHTML= "<a>"+memberName+"</a>";
+						list.append(li);
+						li.addEventListener("click", function(event, channel_name= chan_name){
+							loadPersonalActivity(event.target.innerHTML, channel_name);
+						});				
+					}
+					
+				}
+			}
+		}
+
+		function loadPersonalActivity(username, chan_name){
+			var xhttp = new XMLHttpRequest();
+		  	xhttp.onreadystatechange=function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		      		userActivity= JSON.parse(this.responseText);
+		      		var mainTitle= document.getElementById("mainTitle");
+					mainTitle.innerHTML="<h3>"+"Information about: "+username+"</h3>";
+		      		createUserChart();
+		    	}
+		  	};
+		  	xhttp.open("GET", "getChannelPerson.php?channel="+chan_name+"&username="+username, true);
+		  	xhttp.send();
+		}
+
+		function createUserChart(){
+			var maxNumber= -1000, minNumber=1000; 
+			var width= 800,height= 450;
+			var padding={top:50, right:50, bottom:50,left:50};
+			var main= d3.select(".container svg.channelMember");
+			var format= d3.time.format("%Y-%m-%d");
+
+			var xScale= d3.time.scale().domain([format.parse("2017-07-00"), format.parse("2017-07-05")]).range([0, width-padding.left-padding.right]);
+			var yScale= d3.scale.linear().domain([0,10]).range([height-padding.top-padding.bottom, 0]);
+			var xAxis= d3.svg.axis().scale(xScale).orient('bottom').ticks(4).tickFormat(d3.time.format("%Y-%m-%d"));
+			var yAxis= d3.svg.axis().scale(yScale).orient('left').ticks(8);
+
+
+
+			main.append('g').attr('class','axis').attr('transform', 'translate(102,'+(height-padding.bottom-padding.top+40)+')').call(xAxis);
+			main.append('g').attr('class','axis').attr('transform', 'translate(100,'+'40)').call(yAxis);
+			
+			var rectMargin= 10;
+			main.selectAll('.bar').data(userActivity).enter().append('rect').attr('class','bar')
+									.attr('x',function(d, i){
+										return xScale(format.parse(userActivity[i].day));//rectMargin;
+									})
+									.attr('y', function(d, i){
+										return yScale(d.number);
+									})
+									.attr('width', 20)
+									.attr('height', function(d, i){
+										return height-padding.top-padding.bottom-yScale(d.number);
+									})
+									.attr('transform', 'translate(90,'+'40)')
+									;
+		}
+
+		function showChannelChart(){
+			var maxNumber= -1000, minNumber=1000; 
+			/*
+			getChannelHistory.forEach(function(element){
+				var num= element.number;
+				//var date= element.day;
+				if(num>maxNumber){
+					maxNumber= num;
+				}
+				if(num<minNumber){
+					minNumber= num;
+				}
+				/*
+				if(date> maxDay){
+					maxDay= date;
+				}
+				if(date<minDay){
+					minDay= date;
+				}
+				
+			});
+			*/
+			var width= 800,height= 450;
+			var padding={top:50, right:50, bottom:50,left:50};
+			var main= d3.select(".container svg.channelChart");
+			var format= d3.time.format("%Y-%m-%d");
+
+			var xScale= d3.time.scale().domain([format.parse("2017-07-00"), format.parse("2017-07-05")]).range([0, width-padding.left-padding.right]);
+			var yScale= d3.scale.linear().domain([0,10]).range([height-padding.top-padding.bottom, 0]);
+			var xAxis= d3.svg.axis().scale(xScale).orient('bottom').ticks(4).tickFormat(d3.time.format("%Y-%m-%d"));
+			var yAxis= d3.svg.axis().scale(yScale).orient('left').ticks(8);
+
+
+
+			main.append('g').attr('class','axis').attr('transform', 'translate(102,'+(height-padding.bottom-padding.top+40)+')').call(xAxis);
+			main.append('g').attr('class','axis').attr('transform', 'translate(100,'+'40)').call(yAxis);
+			
+			var rectMargin= 10;
+			main.selectAll('.bar').data(getChannelHistory).enter().append('rect').attr('class','bar')
+									.attr('x',function(d, i){
+										return xScale(format.parse(getChannelHistory[i].day));//rectMargin;
+									})
+									.attr('y', function(d, i){
+										return yScale(d.number);
+									})
+									.attr('width', 20)
+									.attr('height', function(d, i){
+										return height-padding.top-padding.bottom-yScale(d.number);
+									})
+									.attr('transform', 'translate(90,'+'40)')
+									;
+
+		}
+	</script>
+</head>
+<body onload= "initialize()">
+	<div class="container">
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">Channel list</a>
+		    </div>
+		    <ul class="nav navbar-nav" id="navbar_list">
+		      
+		    </ul>
+		  </div>
+		</nav>
+
+		<div class="panel panel-default" id="panel">
+			<div class="panel-body" id="history_display">
+				<div class="btn-group">
+				<button  style="float:left;" class= "btn btn-info" data-toggle="collapse" data-target="#memberDemo">See individual information</button>
+				<button style="float:right;" class= "btn btn-info" data-toggle="collapse" data-target="#channelDemo" onclick= "showChannelChart()">See Channel information</button>
+				</div>
+
+				<div id="memberDemo" class="collapse">
+					<div class="dropdown">
+					  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Channel Member
+					  <span class="caret"></span></button>
+					  <ul class="dropdown-menu" id="memberChoose">
+					    	
+					  </ul>
+					</div>
+					<div id="mainTitle"></div>
+					<svg class= "channelMember" width="100%">
+					</svg>
+				</div>
+			
+				<div id="channelDemo" class="collapse">
+					<svg class= "channelChart" width="100%"></svg>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

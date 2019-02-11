@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    body {
+        width: 1000px;
+    }
+
+    svg {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #select2 {
+        margin-left: 20px;
+    }
+
+    .node text {
+        pointer-events: none;
+        font: 10px sans-serif;
+    }
+
+    .link {
+        stroke: #999;
+        stroke-opacity: .6;
+    }
+    </style>
+</head>
+
+<body onload="initialize()">
+    <div class="container">
+        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+        <script type="text/javascript" src="../channels.json"></script>
+        <script type="text/javascript" src="../users.json"></script>
+        <script type="text/javascript" src="bipart.js"></script>
+
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Channel list</a>
+            </div>
+            <ul class="nav navbar-nav" id="navbar_list">
+              
+            </ul>
+          </div>
+        </nav>
+        
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="start_date">Select Start data:</label>
+                <select class="form-control" id="start_date">
+                </select>
+            </div>
+            <div class="form-group" id="select2">
+                <label for="end_date">Select End date:</label>
+                <select class="form-control" id="end_date">
+                </select>
+            </div>
+            <div class="btn btn-default" style="margin-left:20px" onclick="check_network()">Search</div>
+        </form>
+    </div>
+</body>
+
+</html>

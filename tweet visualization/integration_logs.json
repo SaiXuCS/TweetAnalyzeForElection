@@ -1,0 +1,606 @@
+[
+    {
+        "user_id": "U5RKDTF0C",
+        "user_name": "liyun",
+        "date": "1500522820",
+        "change_type": "added",
+        "service_id": "215111014291",
+        "service_type": "Outgoing WebHooks",
+        "scope": "channels:history"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1500356133",
+        "change_type": "expanded",
+        "app_type": "Slack API Tester",
+        "app_id": "A02",
+        "scope": "read,client,admin,identify,post,apps"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1500356113",
+        "change_type": "expanded",
+        "app_type": "Slack API Tester",
+        "app_id": "A02",
+        "scope": "read,client,admin,identify,post,apps"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1500356103",
+        "change_type": "added",
+        "app_type": "Slack API Tester",
+        "app_id": "A02",
+        "scope": "read,client,admin,identify,post,apps"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1500355203",
+        "change_type": "expanded",
+        "app_type": "NewsApp",
+        "app_id": "A5VDNTVSA",
+        "scope": "identify,bot,incoming-webhook,channels:history,channels:read,channels:write,chat:write:bot,im:history,im:read,im:write"
+    },
+    {
+        "user_id": "U5RKDTF0C",
+        "user_name": "liyun",
+        "date": "1500316507",
+        "change_type": "added",
+        "service_id": "213896919282",
+        "service_type": "Outgoing WebHooks",
+        "scope": "channels:history"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1499861869",
+        "change_type": "expanded",
+        "app_type": "NewsApp",
+        "app_id": "A5VDNTVSA",
+        "scope": "identify,bot,incoming-webhook,channels:history,channels:read,channels:write,chat:write:bot,im:history,im:read,im:write"
+    },
+    {
+        "user_id": "U5RKDTF0C",
+        "user_name": "liyun",
+        "date": "1499301120",
+        "change_type": "added",
+        "app_type": "To-do bot",
+        "app_id": "A0HBTUUPK",
+        "scope": "identity.basic"
+    },
+    {
+        "user_id": "U5R5C5P32",
+        "user_name": "chukun",
+        "date": "1499269735",
+        "change_type": "added",
+        "app_type": "To-do bot",
+        "app_id": "A0HBTUUPK",
+        "scope": "identity.basic"
+    },
+    {
+        "user_id": "U5QSTEXU4",
+        "user_name": "yurulin",
+        "date": "1498743186",
+        "change_type": "expanded",
+        "app_type": "To-do bot",
+        "app_id": "A0HBTUUPK",
+        "scope": "identify,bot,commands,chat:write:bot,identity.basic"
+    },
+    {
+        "user_id": "U5RKDTF0C",
+        "user_name": "liyun",
+        "date": "1498262315",
+        "change_type": "expanded",
+        "app_type": "Slack API Tester",
+        "app_id": "A02",
+        "scope": "read,client,admin,identify,post,apps"
+    },
+    {
+        "user_id": "U5QSEFMR6",
+        "user_name": "mwen8103",
+        "date": "1498241782",
+        "change_type": "added",
+        "app_type": "To-do bot",
+        "app_id": "A0HBTUUPK",
+        "scope": "identity.basic"
+    },
+    {
+        "user_id": "U5RKDTF0C",
+        "user_name": "liyun",
+        "date": "1497999823",
+        "change_type": "expanded",
+        "app_type": "Vibe",
+        "app_id": "A1C75DJPR",
+        "scope": "identity.basic,identity.email,identity.avatar,identity.team,identify,channels:history,channels:read,users:read,users:read.email,chat:write:bot"
+    },
+    {
+        "user_id": "U5RKDTF0C",
+        "user_name": "liyun",
+        "date": "1497999816",
+        "change_type": "added",
+        "app_type": "Vibe",
+        "app_id": "A1C75DJPR",
+        "scope": "identity.basic,identity.email,identity.avatar,identity.team,identify,channels:history,channels:read,users:read,users:read.email,chat:write:bot"
+    },
+    {
+        "user_id": "U5RKDTF0C",
+        "user_name": "liyun",
+        "date": "1497998570",
+        "change_type": "expanded",
+        "app_type": "Slack API Tester",
+        "app_id": "A02",
+        "scope": "read,client,admin,identify,post,apps"
+    },
+    {
+        "user_id": "U5RKDTF0C",
+        "user_name": "liyun",
+        "date": "1497994464",
+        "change_type": "added",
+        "app_type": "Slack API Tester",
+        "app_id": "A02",
+        "scope": "read,client,admin,identify,post,apps"
+    },
+    {
+        "user_id": "U5S02R7K7",
+        "user_name": "yuesu93",
+        "date": "1497990058",
+        "change_type": "added",
+        "app_type": "To-do bot",
+        "app_id": "A0HBTUUPK",
+        "scope": "identity.basic"
+    },
+    {
+        "user_id": "U5RKDTF0C",
+        "user_name": "liyun",
+        "date": "1497895342",
+        "change_type": "added",
+        "app_type": "hackernewsbot",
+        "app_id": "A3A6L35E1",
+        "scope": "identify,bot,channels:history,chat:write:bot"
+    },
+    {
+        "user_id": "U5RKDTF0C",
+        "user_name": "liyun",
+        "date": "1497843650",
+        "change_type": "added",
+        "app_type": "Todoist",
+        "app_id": "A0NSTB8R3",
+        "scope": "identify,commands"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497579290",
+        "change_type": "expanded",
+        "app_type": "NewsApp",
+        "app_id": "A5VDNTVSA",
+        "scope": "identify,bot,incoming-webhook,channels:history,channels:read,channels:write,chat:write:bot,im:history,im:read,im:write"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497579166",
+        "change_type": "expanded",
+        "app_type": "NewsApp",
+        "app_id": "A5VDNTVSA",
+        "scope": "identify,bot,incoming-webhook,channels:history,channels:read,channels:write,chat:write:bot,im:history,im:read,im:write"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497571784",
+        "change_type": "removed",
+        "service_id": "198704215156",
+        "service_type": "Bots",
+        "scope": "bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497571468",
+        "change_type": "added",
+        "app_type": "NewsApp",
+        "app_id": "A5VDNTVSA",
+        "scope": "identify,bot,incoming-webhook,channels:history,channels:read,channels:write,chat:write:bot,im:history,im:read,im:write"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1497570832",
+        "change_type": "removed",
+        "app_type": "News",
+        "app_id": "A5UK432MQ",
+        "scope": "identify,bot,chat:write:bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497570537",
+        "change_type": "updated",
+        "service_id": "198704215156",
+        "service_type": "Bots",
+        "scope": "bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497570537",
+        "change_type": "updated",
+        "service_id": "198704215156",
+        "service_type": "Bots",
+        "scope": "bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497570519",
+        "change_type": "added",
+        "service_id": "198704215156",
+        "service_type": "Bots",
+        "scope": "bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497570433",
+        "change_type": "expanded",
+        "app_type": "News",
+        "app_id": "A5UK432MQ",
+        "scope": "identify,bot,chat:write:bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497569797",
+        "change_type": "added",
+        "app_type": "News",
+        "app_id": "A5UK432MQ",
+        "scope": "identify,bot,chat:write:bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497569694",
+        "change_type": "removed",
+        "service_id": "197417729461",
+        "service_type": "Bots",
+        "scope": "bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497569688",
+        "change_type": "removed",
+        "service_id": "198133330294",
+        "service_type": "Bots",
+        "scope": "bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497569682",
+        "change_type": "disabled",
+        "reason": "server",
+        "service_id": "198133330294",
+        "service_type": "Bots",
+        "scope": "bot"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1497569564",
+        "change_type": "removed",
+        "app_type": "News",
+        "app_id": "A5UMSSCRK",
+        "scope": "identify,bot"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1497569564",
+        "change_type": "removed",
+        "app_type": "News",
+        "app_id": "A5UMSSCRK",
+        "scope": "identify,bot"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1497569279",
+        "change_type": "removed",
+        "app_type": "Chat",
+        "app_id": "A5R67CVQ8",
+        "scope": "identify,bot,incoming-webhook"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1497569279",
+        "change_type": "removed",
+        "app_type": "Chat",
+        "app_id": "A5R67CVQ8",
+        "scope": "identify,bot,incoming-webhook"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1497569270",
+        "change_type": "removed",
+        "app_type": "ChatBot",
+        "app_id": "A5SLE9U3Z",
+        "scope": "identify,bot,incoming-webhook"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1497569270",
+        "change_type": "removed",
+        "app_type": "ChatBot",
+        "app_id": "A5SLE9U3Z",
+        "scope": "identify,bot,incoming-webhook"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497568745",
+        "change_type": "added",
+        "app_type": "News",
+        "app_id": "A5UMSSCRK",
+        "scope": "identify,bot"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1497568527",
+        "change_type": "removed",
+        "app_type": "NewsBot",
+        "app_id": "A5TR44K99",
+        "scope": "identify,bot"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1497568527",
+        "change_type": "removed",
+        "app_type": "NewsBot",
+        "app_id": "A5TR44K99",
+        "scope": "identify,bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497567647",
+        "change_type": "added",
+        "app_type": "NewsBot",
+        "app_id": "A5TR44K99",
+        "scope": "identify,bot"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1497471563",
+        "change_type": "removed",
+        "app_type": "NewsApp",
+        "app_id": "A5T8ZT6HG",
+        "scope": "identify,bot,incoming-webhook,chat:write:bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497394786",
+        "change_type": "updated",
+        "service_id": "198133330294",
+        "service_type": "Bots",
+        "scope": "bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497394786",
+        "change_type": "updated",
+        "service_id": "198133330294",
+        "service_type": "Bots",
+        "scope": "bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497394038",
+        "change_type": "added",
+        "service_id": "198133330294",
+        "service_type": "Bots",
+        "scope": "bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497393178",
+        "change_type": "added",
+        "service_id": "197417729461",
+        "service_type": "Bots",
+        "scope": "bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497392599",
+        "change_type": "expanded",
+        "app_type": "NewsApp",
+        "app_id": "A5T8ZT6HG",
+        "scope": "identify,bot,incoming-webhook,chat:write:bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497392544",
+        "change_type": "expanded",
+        "app_type": "NewsApp",
+        "app_id": "A5T8ZT6HG",
+        "scope": "identify,bot,incoming-webhook,chat:write:bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497392269",
+        "change_type": "expanded",
+        "app_type": "NewsApp",
+        "app_id": "A5T8ZT6HG",
+        "scope": "identify,bot,incoming-webhook,chat:write:bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497391063",
+        "change_type": "added",
+        "app_type": "NewsApp",
+        "app_id": "A5T8ZT6HG",
+        "scope": "identify,bot,incoming-webhook,chat:write:bot"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1497391003",
+        "change_type": "removed",
+        "app_type": "TryNewsBot",
+        "app_id": "A5SUWHE8K",
+        "scope": "identify,bot"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1497391003",
+        "change_type": "removed",
+        "app_type": "TryNewsBot",
+        "app_id": "A5SUWHE8K",
+        "scope": "identify,bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497389299",
+        "change_type": "added",
+        "app_type": "TryNewsBot",
+        "app_id": "A5SUWHE8K",
+        "scope": "identify,bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497132266",
+        "change_type": "expanded",
+        "app_type": "ChatBot",
+        "app_id": "A5SLE9U3Z",
+        "scope": "identify,bot,incoming-webhook"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497132169",
+        "change_type": "expanded",
+        "app_type": "Chat",
+        "app_id": "A5R67CVQ8",
+        "scope": "identify,bot,incoming-webhook"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497131799",
+        "change_type": "expanded",
+        "app_type": "Chat",
+        "app_id": "A5R67CVQ8",
+        "scope": "identify,bot,incoming-webhook"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497131790",
+        "change_type": "added",
+        "app_type": "Chat",
+        "app_id": "A5R67CVQ8",
+        "scope": "identify,bot,incoming-webhook"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1497131571",
+        "change_type": "removed",
+        "app_type": "FirstChatBot",
+        "app_id": "A5RUKDQJH",
+        "scope": "identify,bot,channels:history,channels:read"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497130641",
+        "change_type": "added",
+        "app_type": "FirstChatBot",
+        "app_id": "A5RUKDQJH",
+        "scope": "identify,bot,channels:history,channels:read"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497127101",
+        "change_type": "added",
+        "app_type": "ChatBot",
+        "app_id": "A5SLE9U3Z",
+        "scope": "identify,bot,incoming-webhook"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1497126939",
+        "change_type": "removed",
+        "app_type": "ChatBot",
+        "app_id": "A5R5GB3Q8",
+        "scope": "identify,bot"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1497126938",
+        "change_type": "removed",
+        "app_type": "ChatBot",
+        "app_id": "A5R5GB3Q8",
+        "scope": "identify,bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497119424",
+        "change_type": "added",
+        "app_type": "ChatBot",
+        "app_id": "A5R5GB3Q8",
+        "scope": "identify,bot"
+    },
+    {
+        "user_id": "U5RK2T9JP",
+        "user_name": "sax2",
+        "date": "1497106807",
+        "change_type": "added",
+        "app_type": "Gupshup Proxy bot",
+        "app_id": "A0RN1V1PV",
+        "scope": "identify,bot"
+    },
+    {
+        "user_id": "U5QSTEXU4",
+        "user_name": "yurulin",
+        "date": "1497028683",
+        "change_type": "added",
+        "app_type": "To-do bot",
+        "app_id": "A0HBTUUPK",
+        "scope": "identify,bot,commands,chat:write:bot,identity.basic"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1496939769",
+        "change_type": "added",
+        "service_id": "194194656864",
+        "service_type": "Google Drive",
+        "scope": "files:write:user"
+    }
+]

@@ -1,0 +1,136 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    path.link {
+      fill: none;
+      stroke: #666;
+      stroke-width: 2px;
+    }
+    
+    svg{
+        display: block;
+        margin:0;
+        padding: 0;
+    }
+    .axis {
+      font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+    .container{
+      width: 100%;
+    }
+    .navbar{
+      margin-bottom: 10px;
+    }
+    #infoPanel{
+      display: none;
+      margin-top:40px;
+      border-top: 1px solid black;
+      width: 100%;
+    }
+    .body{
+      width: 1200px;
+    }
+    #graph{
+      height: 80%;
+      position: relative;
+    }
+    #graphPanel{
+      position: absolute;
+      bottom: 0;
+      width: 67%;
+    }
+    #directedPanel{
+      float: right;
+      height: 70%;
+      width: 45%;
+    }
+    #channelInfo{
+      border-right: 2px solid black;
+      overflow: scroll;
+      height: 300px;
+    }
+    #peerInfo{
+      overflow: scroll;
+      height: 300px;
+    }
+    #channelMember{
+      margin-top:30px;
+      display: none;
+      overflow: scroll;
+      height: 300px;
+      width: 100%;
+    }
+    </style>
+</head>
+
+<body onload="initialize()">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../channels.json"></script>
+    <script type="text/javascript" src="../users.json"></script>
+    <script type="text/javascript" src="network.js"></script>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Channel list</a>
+            </div>
+            <ul class="nav navbar-nav" id="navbar_list">
+              
+            </ul>
+        </nav>
+
+        <form class="form-inline">
+            <div class="btn-group">
+              <div class="btn btn-primary" onclick="check_network2()">Mixed Directed Link</div>
+              <div class="btn btn-primary" onclick="check_network3()">Explicit Directed Link</div>
+            </div> 
+        </form>
+        <div id= "graph">
+          <div id= "graphPanel">
+            
+          </div>
+        
+            <div id="directedPanel">
+            </div>
+         
+        </div>
+        <div id= "infoPanel">
+          <div class= "row">
+            <div class= "col-sm-12" id= "peerInfo">
+              <h2>Communication Messages:</h2>   
+              <div class="table-responsive">    
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Sender</th>
+                      <th>Receiver</th>
+                      <th>Message</th>
+                      <th>Day</th>
+                    </tr>
+                  </thead>
+                  <tbody id= "communicationBody">
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+
+</html>
